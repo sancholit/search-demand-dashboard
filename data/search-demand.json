@@ -1,0 +1,33 @@
+{
+  "updated_at": null,
+  "datasets": [
+    {
+      "id": "yandex_wordstat",
+      "label": "Яндекс Вордстат",
+      "metric_label": "Поисковый спрос",
+      "unit": "запросов",
+      "metric_family": "absolute_requests",
+      "precision": "first_party_count",
+      "precision_label": "First-party count"
+    },
+    {
+      "id": "google_keyword_planner",
+      "label": "Google Keyword Planner",
+      "metric_label": "Средний поисковый объём",
+      "unit": "поисков/мес.",
+      "metric_family": "approx_requests",
+      "precision": "approximate",
+      "precision_label": "Приблизительная оценка"
+    },
+    {
+      "id": "google_trends",
+      "label": "Google Trends",
+      "metric_label": "Относительный интерес",
+      "unit": "индекс 0–100",
+      "metric_family": "relative_index",
+      "precision": "sampled_normalized",
+      "precision_label": "Выборка / нормированный индекс"
+    }
+  ],
+  "records": []
+}
