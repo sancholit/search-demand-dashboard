@@ -1,6 +1,6 @@
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 let DATA=null, engineExpanded=false;
-const esc=(v='')=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const esc=(v='')=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot',"'":'&#39;'}[c]));
 const pct=v=>typeof v==='number'?Math.round(v*100):null;
 const progressText=p=>typeof p.progress==='number'?`${pct(p.progress)}%`:'—';
 const qualityShort=q=>q==='Достаточно данных'?'подтверждено':'недостаточно данных';
@@ -89,7 +89,7 @@ function openProject(id){
     <div class="d-meta">${esc(p.portfolio)} · ${esc(p.status)} · ${esc(p.stage)} · ${esc(p.priority)}</div>
     <div class="d-kpis">
       <div class="d-kpi"><span>Итоговый прогресс</span><strong>${progress}</strong></div>
-      <div class="d-kpi"><span>Покрытие чек-листа</span><strong>${pct(p.coverage)}%</strong></div>
+      <div class="d-kpi"><span>Покрытие контрольного списка</span><strong>${pct(p.coverage)}%</strong></div>
       <div class="d-kpi"><span>Выполнено действий</span><strong>${p.counts.done}/${p.counts.total}</strong></div>
       <div class="d-kpi"><span>Ручных корректировок</span><strong>${p.manualCorrections}</strong></div>
     </div>
